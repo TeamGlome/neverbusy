@@ -18,7 +18,6 @@ const nextConfig = {
       },
     ],
   },
-  output: 'standalone',
   swcMinify: true,
   poweredByHeader: false,
   reactStrictMode: true,
