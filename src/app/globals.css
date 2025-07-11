@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* High contrast Tesla-inspired theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 220 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 20%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 220 100% 50%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 220 100% 60%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 220 100% 60%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* High contrast enhancements */
+.hero-section {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+.high-contrast-section {
+  background: #000000;
+  color: #ffffff;
+}
+
+.primary-gradient {
+  background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+}
+
+.text-primary-bold {
+  color: #0066ff;
+  font-weight: 700;
+}
+
+.border-high-contrast {
+  border-color: #000000;
+  border-width: 2px;
+}
+
+.shadow-bold {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+}
+
+/* Typography enhancements for better contrast */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #000000;
+}
+
+.text-muted-foreground {
+  color: #333333 !important;
+}
+
+/* Button enhancements */
+.btn-primary-bold {
+  background: #0066ff;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary-bold:hover {
+  background: #0052cc;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px -3px rgba(0, 102, 255, 0.3);
+}
+
+.btn-outline-bold {
+  border: 2px solid #000000;
+  color: #000000;
+  background: transparent;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-bold:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Card enhancements */
+.card-high-contrast {
+  border: 2px solid #f0f0f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-high-contrast:hover {
+  border-color: #0066ff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Stats section */
+.stats-bold .stat-value {
+  color: #0066ff;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.stats-bold .stat-label {
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Navigation enhancements */
+.nav-high-contrast {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Status badge enhancements */
+.status-operational {
+  background: #10b981;
+  color: #ffffff;
+  font-weight: 600;
+}
